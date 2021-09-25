@@ -1,0 +1,235 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: #e7ddba;
+    opacity: 0.9;
+    color: black;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    margin: 50px auto;
+    display: grid;
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.lefttext {
+    grid-row-start: 1;
+    grid-row-end: 4;
+    text-align: center;
+    margin-top: -5rem;
+}
+
+.contact {
+    font-weight: bolder;
+    font-size: 4rem;
+    margin-left: -8.5rem;
+}
+
+.conttxt {
+    font-weight: normal;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.phone {
+    margin-left: -9.5rem;
+    margin-top: .7rem;
+}
+
+.firstname {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    text-align: left;
+    font-size: 2rem;
+    /* margin-left: 5rem; */
+    font-weight: 600;
+}
+
+.lastname {
+    grid-column-start: 3;
+    grid-column-end: 4;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.emailid {
+    text-align: left;
+    font-size: 2rem;
+    /* margin-left: 5rem; */
+    font-weight: 600;
+}
+
+.phonenumber {
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.message {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    /* text-align: center; */
+    font-size: 2rem;
+    margin-left: -59.5%;
+    font-weight: 600;
+    margin-top: -6%;
+    
+}
+
+input {
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: groove;
+    border-bottom: 3px solid;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+input:hover {
+    border-style: groove;
+    border: 3px solid;
+}
+
+textarea {
+    border-top-style: hidden;
+    border-left-style: hidden;
+    border-right-style: hidden;
+    border-bottom-style: groove;
+    border-bottom: 3px solid;
+    font-size: 1.6rem;
+    margin-left: 19.5rem;
+    width: 36rem;
+    margin-top: 6rem;
+    height: 3rem;
+}
+
+textarea:hover {
+    border-style: groove;
+    border: 3px solid;
+}
+
+.required {
+    color: red;
+}
+
+button {
+    position: absolute;
+    font-size: 1.5rem;
+    /* padding: 4px 20px 2px 20px; */
+    margin-left: 21%;
+    color: black;
+    bottom: 1%;
+}
+
+button:hover {
+    background-color: white;
+    transition: background-color 1s;
+}
+.realmessage{
+    position: absolute;
+    height: 30%;
+    width: 40%;
+    left: 50%;
+    bottom: 9%;
+}
+
+
+/* /////media queries///// */
+  /* big landscape tablets, laptops, and desktops */
+  @media (min-width: 1200px){
+    
+    input {
+        font-size: 1rem;
+    }
+    
+    textarea {
+        font-size: 1rem;
+    }
+    
+    .firstname{ 
+        font-size: 1.7rem;
+    }
+    
+    .lastname{ 
+        font-size: 1.7rem;
+    }
+    
+    .emailid{
+        font-size: 1.7rem;
+    }
+    
+    .phonenumber{
+        font-size: 1.7rem;
+    }
+    .message{
+        text-align: center;
+        font-size: 1.7rem;
+    }
+      }
+    
+    /* tablet, landscape,low resolution laptop and desktop */
+    @media (max-width: 990px){
+    
+        input {
+    
+            font-size: .8rem;
+        }
+        textarea{
+    
+                font-size: .8rem;
+            }
+        
+    }
+    /* potrait tablets, e-readers, kindle */
+    @media (max-width: 800px){
+        .message{ 
+            text-align: center;
+        }
+    }
+    /* smart phones, landscape iphone */
+    @media (max-width: 660px){
+        .conttxt{
+            visibility: hidden;
+        }
+        
+        .phone{
+          visibility: hidden;
+        }
+        input {
+            font-size: .8rem;
+        }
+        
+        textarea {
+            font-size: .8rem;
+        }
+        
+        .firstname{ 
+            font-size: 1.3rem;
+        }
+        
+        .lastname{ 
+            font-size: 1.3rem;
+        }
+        
+        .emailid{
+            font-size: 1.3rem;
+        }
+        
+        .phonenumber{
+            font-size: 1.3rem;
+        }
+        .message{
+            text-align: center;
+            font-size: 1rem;
+            margin-right: -100px;
+        }
+    }
+    
+    @media(max-width:480px){
+    
+    }

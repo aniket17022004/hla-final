@@ -1,0 +1,125 @@
+img {
+    height: 450px;
+    width: 450px;
+    margin-top: 120px;
+    margin-left: 100px;
+    position: absolute;
+}
+
+p {
+    margin-left: 600px;
+    width: 510px;
+    display: inline-block;
+    margin-top: 150px;
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.icons {
+    margin-top: 4rem;
+    margin-left: -2rem;
+    list-style-type: none;
+    font-size: 2rem;
+}
+
+.fa:hover {
+    color: blue;
+}
+
+.menubar {
+    width: 80%;
+    margin-left: -1rem;
+    margin-top: 14rem;
+    display: flex;
+}
+
+#menuToggle {
+    display: block;
+    top: 30px;
+    right: 10px;
+    z-index: 1;
+    position: fixed;
+}
+
+#menuToggle input {
+    display: block;
+    width: 40px;
+    height: 100vh;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #151b54;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: white;
+}
+
+#menuToggle input:checked~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked~span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    margin: -100px 0 0 0;
+    padding: 50px;
+    padding-top: 125px;
+    right: -100px;
+    background: #033e3e;
+    list-style-type: disc;
+    -webkit-font-smoothing: antialiased;
+    transform: translate(100%, 0);
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 12px 0;
+    font-size: 22px;
+}
+
+#menu li:hover {
+    list-style-type: circle;
+}
+
+#menuToggle input:checked~ul {
+    transform: none;
+    opacity: 1;
+}
+
+#menu a {
+    text-decoration: none;
+    color: white;
+}
